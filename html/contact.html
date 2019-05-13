@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CRESST</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Font -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
+
+    <!-- Bootstrap CSS, JQuery -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    <!-- Main CSS, JS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../script/script.js"></script>
+    <script src="upload.js"></script>
+    <script src="upload.php"></script>
+
+    <!--
+        <script src="../script/dropzone.js"></script>
+    <script src="https://rawgit.com/enyo/dropzone/master/dist/dropzone.js"></script>
+    <link rel="stylesheet" href="https://rawgit.com/enyo/dropzone/master/dist/dropzone.css">
+    <link href="https://rawgithub.com/hayageek/jquery-upload-file/master/css/uploadfile.css" rel="stylesheet">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script src="https://rawgithub.com/hayageek/jquery-upload-file/master/js/jquery.uploadfile.min.js"></script>-->
+
+</head>
+
+<body>
+
+<div class="navbar" id="navbar">
+  <a href="../index.html" id="logo"><img src="../images/logo.png" alt="Logo" style="max-height:70px; width: auto; height: auto;"></a>
+  <ul id="navbar-right">
+    <li><a href="../index.html">PEOPLE</a></li>
+    <li><a href="purpose.html">PURPOSE</a></li>
+    <li><a href="resources.html">RESOURCES</a>
+        <ul class="dropdown">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </ul></li>
+    <li><a class="active" href="contact.html">CONTACT</a></li>
+  </div>
+</div>
+
+  <!-- CONTACT PAGE
+    ---------------------- -->
+  <div class="container" id="contact" style="margin-top:175px; padding:15px 15px 100px;">
+    <h2>CONTACT</h2>
+    <p>blahblahblahblah</p>
+  </div>
+
+    <!-- ------- START OF UPLOAD SECTION ------- -->
+    <!--<div id="mulitplefileuploader">Upload</div>
+ 
+<div id="status"></div>
+<script>
+ 
+$(document).ready(function()
+{
+ 
+var settings = {
+    url: "../script/upload.php",
+    method: "POST",
+    allowedTypes:"jpg,png,gif,doc,pdf,zip",
+    fileName: "myfile",
+    multiple: true,
+    onSuccess:function(files,data,xhr)
+    {
+        $("#status").html("<font color='green'>Upload is success</font>");
+ 
+    },
+    onError: function(files,status,errMsg)
+    {       
+        $("#status").html("<font color='red'>Upload is Failed</font>");
+    }
+}
+$("#mulitplefileuploader").uploadFile(settings);
+ 
+});
+</script>
+
+<br>-->
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+            <div class="img-zone text-center" id="img-zone">
+                <div class="img-drop">
+                    <img src="../images/download.png" alt="Download" height="42" width="42" style="margin-bottom: 2rem;">
+                    <p>Drag and drop files</p>
+                    <p><small>or</small></p>
+                    <span class="btn btn-success btn-file">
+                        Select File<input type="file" multiple="" accept="image/*">
+                    </span>
+                </div>
+            </div>
+            <div class="progress hidden">
+                <div style="width: 0%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" role="progressbar" class="progress-bar progress-bar-success progress-bar-striped active">
+                    <span class="sr-only">0% Complete</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="img-preview" class="row">
+
+    </div>
+</div>
+
+<br>
+
+<!--
+    <div class="container">
+
+<form action="upload.php" class="dropzone">
+  <div class="fallback">
+    <input name="file" type="file" multiple />
+  </div>
+</form>
+
+</div>
+
+<br>
+
+
+<div class='container'>
+        <p>
+            Select File: <input type='file' id='_file'> <input type='button' id='_submit' value='Upload!'>
+        </p>
+        <div class='progress_outer'>
+            <div id='_progress' class='progress'></div>
+        </div>
+    </div>
+
+    <script src='upload.js'></script>
+
+    <br>
+
+
+  <div class="container" style="margin-bottom:250px;">
+<div id="drop_file_zone" ondrop="upload_file(event)" ondragover="return false">
+  <div id="drag_upload_file">
+    <p>Drop file here</p>
+    <p>or</p>
+    <p><input type="button" value="Select File" onclick="file_explorer();"></p>
+    <input type="file" id="selectfile" multiple>
+  </div>
+</div>
+
+</div>
+
+
+<script type="text/javascript">
+  var fileobj;
+  function upload_file(e) {
+    e.preventDefault();
+    for (i = 0; i < e.dataTransfer.files.length; i++) {
+    fileobj = e.dataTransfer.files[i];
+    ajax_file_upload(fileobj);
+    }
+  }
+ 
+  function file_explorer() {
+    document.getElementById('selectfile').click();
+    document.getElementById('selectfile').onchange = function() {
+        fileobj = document.getElementById('selectfile').files[0];
+      ajax_file_upload(fileobj);
+    };
+  }
+ 
+  function ajax_file_upload(file_obj) {
+    if(file_obj != undefined) {
+        var form_data = new FormData();                  
+        form_data.append('file', file_obj);
+      $.ajax({
+        type: 'POST',
+        url: '../script/upload.php',
+        contentType: false,
+        processData: false,
+        data: form_data,
+        success:function(response) {
+          alert(response);
+          $('#selectfile').val('');
+        }
+      });
+    }
+  }
+</script>
+
+
+<script>
+<?php
+// Include the database configuration file
+include 'dbConfig.php';
+
+// Get images from the database
+$query = $db->query("SELECT * FROM images ORDER BY uploaded_on DESC");
+
+if($query->num_rows > 0){
+    while($row = $query->fetch_assoc()){
+        $imageURL = 'uploads/'.$row["file_name"];
+?> 
+  
+<img src="<?php echo $imageURL; ?>" alt="" />
+
+  <?php }
+}else{ ?>
+    <p>No image(s) found...</p>
+
+<?php } ?>
+</script>-->
+  <!-- ------- END OF UPLOAD SECTION ------- -->
+
+    
+
+</body>
+</html>
