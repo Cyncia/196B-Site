@@ -1,3 +1,12 @@
+<!-- TODO:
+  - update repo name
+  - clean up files
+  - align both HTDOCS version w/ repo verison
+  - subtab hover
+  - resize
+  - on click, set to active
+-->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,11 +23,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
 
     <!-- Main CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    <script src="script/script.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../script/script.js"></script>
 </head>
 
 <!-- TODO:
@@ -26,50 +35,110 @@
     - get images and info
     - html extensions
 -->
-
 <body>
 
+<div class="container-fluid" style="min-width: 1000px;">
+<!-- Master nav -->
+<nav class="navbar-doublerow fixed-top">   
+  <!-- top nav -->
+  <nav class="navbar navbar-top">
 
+    <div class="nav-row">
+
+      <div class="col-3">
+        <!-- left nav top -->
+
+        <div class="row">
+          <a href="index.html"><img src="../images/logo-icon.png" alt="CRESST-Logo" class="img-responsive" id="logo" align="middle"></a>
+          
+          <a href="https://codespark.com/" target="_blank"><img src="../images/cs-logo-icon.png" alt="codeSpark-Logo" class="img-responsive" id="logo" align="middle"></a>
+        </div>
+
+      </div>
+
+      <div class="col-9">
+        <!-- right nav top -->
+        <ul class="nav navbar-nav pull-right ml-auto tabs" data-tabs id="all-tabs">
+          <li><a href="people.html" id="#people">PEOPLE</a></li>
+          <li><a href="purpose.html" id="#purpose">PURPOSE</a></li>
+          <li><a href="resources.html" id="#resources">RESOURCES</a></li>
+          <li><a href="contact.html" id="#contact">CONTACT</a></li>
+        </ul>
+      </div>
+  
+    </div>
+  </nav> <!-- /top nav -->
+
+  <!-- down nav -->
+  <nav class="navbar navbar-down">
+
+    <div class="nav-row2">
+
+
+      <div class="col-4">
+        <div class="row">
+          <a href="http://cresst.org/" target="_blank"><img src="../images/logo-black-words.png" alt="CRESST-Logo" class="img-responsive" id="logo-words" align="middle"></a>
+          
+          <a href="https://codespark.com/" target="_blank"><img src="../images/cs-logo-words.png" alt="codeSpark-Logo" class="img-responsive" id="logo-words" align="middle"></a>
+        </div>
+      </div>
+
+      <div class="col-8">
+    <ul class="nav navbar-nav ml-auto pull-right">
+
+      <!-- fix subtab hover 
+      <div class="tab-content">
+        <div class="content" id="people">
+          PEOPLE tab tab tab
+        </div>
+        <div class="content" id="purpose">
+          PURPOSE tab tab
+        </div>
+        <div class="content" id="resources">
+          RESOURCES tab tab tab
+        </div>
+        <div class="content" id="contact">
+          CONTACT tab tab tab
+        </div>  
+      </div> -->
+
+    </ul>
+  </div>
+
+  </div>
+
+  </nav>
+
+</nav>    <!-- /master nav -->
+</div>
+
+<!--
 <div class="navbar" id="navbar">
-  <a href="#" id="logo"><img src="images/logo.png" alt="Logo" style="max-height:70px; width: auto; height: auto;"></a>
+  <a href="#" id="logo"><img src="../images/logo-white.png" alt="Logo" style="max-height:70px; width: auto; height: auto;"></a>
+
+  <div class="row" style="background-color: blue">
   <ul id="navbar-right">
-    <li><a class="active" href="#">PEOPLE</a></li>
-    <li><a href="html/purpose.html">PURPOSE</a></li>
-    <li><a href="html/resources.html">RESOURCES</a>
+    <li><a class="active" href="people.html">PEOPLE</a></li>
+    <li><a href="purpose.html">PURPOSE</a></li>
+    <li><a href="resources.html">RESOURCES</a>
         <ul class="dropdown">
           <a href="#">Link 1</a>
           <a href="#">Link 2</a>
           <a href="#">Link 3</a>
         </ul></li>
-    <li><a href="html/contact.html">CONTACT</a></li>
+    <li><a href="contact.html">CONTACT</a></li>
   </ul>
 </div>
 
-
-<!--
-  <div class="nav-menu fixed-top d-flex">
-    <div class="container d-flex">
-        <div class="row d-flex">
-            <div class="col-md-12 d-flex">
-                <nav class="navbar navbar-expand-lg d-flex">
-                        <ul class="navbar-nav d-flex" style="background-color: red">
-                            <li class="ml-auto nav-item"> <a class="nav-link active" href="#people" onclick="toggle_visibility('people');">PEOPLE</a> </li>
-                            <li class="ml-auto nav-item"> <a class="nav-link" href="#purpose" onclick="toggle_visibility('purpose');">PURPOSE</a> </li>
-                            <li class="ml-auto nav-item"> <a class="nav-link" href="#resources" onclick="toggle_visibility('resources');">RESOURCES</a>
-                                <ul class="dropdown">
-                                  <a href="#">Link 1</a>
-                                  <a href="#">Link 2</a>
-                                  <a href="#">Link 3</a>
-                                </ul></li>
-                            <li class="ml-auto nav-item"> <a class="nav-link" href="#contact" onclick="toggle_visibility('contact');">CONTACT</a> </li>
-                        </ul>
-                </nav>
-            </div>
-        </div>
-    </div>
-  </div>
+<div class="row" style="background-color: pink">
+  <ul id="navbar-right">
+    <li><a class="active" href="#">CRESST</a></li>
+    <li><a href="#">codeSpark</a></li>
+    <li><a href="#">Advisors</a></li>
+  </ul>
+</div>
+</div>
 -->
-
 
 <!-- on tab click set to active 
 <div class="container" id="navbar">
@@ -87,16 +156,20 @@
 </div>
 -->
 
+
+
+
   <!-- Identifying Young Children’s Computational Thinking Processes in Visual Programming
 Environments Using Telemetry-Based Evidence Collection Methods -->
 
   <!-- PEOPLE PAGE
     ---------------------- -->
+
   <div class="container" id="people" style="margin-top:175px; padding:15px 15px;">
 
     <div class="row"> 
       <div class="col-3" style="max-width: 100%;"> 
-        <div class="profile"><img src="images/chung.jpg" alt="ChungProfile"></div>
+        <div class="profile"><img src="../images/chung.jpg" alt="ChungProfile"></div>
       </div>
       <div class="col-9 my-auto" style="max-width: 60%;">
         <h1>Greg Chung</h1>
@@ -112,7 +185,7 @@ Environments Using Telemetry-Based Evidence Collection Methods -->
 
     <div class="row"> 
       <div class="col-3" style="max-width: 100%;"> 
-        <div class="profile"><img src="images/chung.jpg" alt="ChungProfile"></div>
+        <div class="profile"><img src="../images/chung.jpg" alt="ChungProfile"></div>
       </div>
       <div class="col-9 my-auto" style="max-width: 60%;">
         <h1>Greg Chung</h1>
@@ -127,7 +200,7 @@ Environments Using Telemetry-Based Evidence Collection Methods -->
 
     <div class="row"> 
       <div class="col-3" style="max-width: 100%;"> 
-        <div class="profile"><img src="images/chung.jpg" alt="ChungProfile"></div>
+        <div class="profile"><img src="../images/chung.jpg" alt="ChungProfile"></div>
       </div>
       <div class="col-9 my-auto" style="max-width: 60%">
         <h1>Greg Chung</h1>
@@ -138,6 +211,12 @@ Environments Using Telemetry-Based Evidence Collection Methods -->
 
     <p>Dr. Greg Chung is the Associate Director of Technology and Research Innovation. His current work focuses on the impact of various learning technologies, such as games and intelligent tutoring systems on learning and engagement outcomes, the design of telemetry systems for games, and analytical approaches to support the modeling of learning outcomes from fine-grained data. Greg has led research funded by the U.S. Department of Education, National Science Foundation, Office of Naval Research, Defense Advanced Research Projects Agency, and PBS KIDS. This work spanned the evaluation of learning technologies, development of computer-based games and simulations, assessments of learning processes and outcomes using sensors, web-based measures of problem-solving, concept mapping, and AI-based computational methods.</p>
   </div>
+
+<!-- landing site and partners (bottom? link to CRESST and codeSparks?) 
+    people page (3 from cresst, 3 from codesparks, ~5 advisors)
+    resources - upload? + other content
+    contact - take from other sites
+-->
 
 </body>
 </html>

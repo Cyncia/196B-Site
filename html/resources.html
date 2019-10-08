@@ -23,10 +23,71 @@
 
 <body>
 
+<div class="container-fluid" style="min-width: 1000px;" id="navigation_bar">
+<!-- Master nav -->
+<nav class="navbar-doublerow fixed-top">   
+  <!-- top nav -->
+  <nav class="navbar navbar-top">
+
+    <div class="nav-row">
+
+      <div class="col-3">
+        <!-- left nav top -->
+
+        <div class="row">
+          <a href="http://cresst.org/"><img src="../images/logo-icon.png" alt="CRESST-Logo" class="img-responsive" id="logo" align="middle"></a>
+          
+          <a href="https://codespark.com/" target="_blank"><img src="../images/cs-logo-icon.png" alt="codeSpark-Logo" class="img-responsive" id="logo" align="middle"></a>
+        </div>
+
+      </div>
+
+      <div class="col-9">
+        <!-- right nav top -->
+        <ul class="nav navbar-nav pull-right ml-auto" id="activeTab">
+          <li><a href="home.html">HOME</a></li>
+          <li><a href="people.html">PEOPLE</a></li>
+          <li><a href="purpose.html">PURPOSE</a></li>
+          <li><a href="resources.html" class="active">RESOURCES</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+  
+    </div>
+  </nav> <!-- /top nav -->
+
+  <!-- down nav -->
+  <nav class="navbar navbar-down">
+
+    <div class="nav-row2">
+      <div class="col-4">
+        <div class="row">
+          <a href="http://cresst.org/" target="_blank"><img src="../images/logo-black-words.png" alt="CRESST-Logo" class="img-responsive" id="logo-words" align="middle"></a>
+          
+          <a href="https://codespark.com/" target="_blank"><img src="../images/cs-logo-words.png" alt="codeSpark-Logo" class="img-responsive" id="logo-words" align="middle"></a>
+        </div>
+      </div>
+
+      <div class="col-8">
+    <ul class="nav navbar-nav ml-auto pull-right">
+      <li><a href="#section1">tab1</a></li> <!-- active -->
+      <li><a href="#section2">tab2</a></li>
+      <li><a href="#section3">tab3</a></li>
+    </ul>
+  </div>
+
+  </div>
+
+  </nav>
+
+</nav>    <!-- /master nav -->
+</div>
+
+<!-- previous attempt 
  <div class="navbar" id="navbar">
-  <a href="../index.html" id="logo"><img src="../images/logo.png" alt="Logo" style="max-height:70px; width: auto; height: auto;"></a>
+  <a href="index.html" id="logo"><img src="../images/logo-white.png" alt="Logo" style="max-height:70px; width: auto; height: auto;"></a>
   <ul id="navbar-right">
-    <li><a href="../index.html">PEOPLE</a></li>
+    <li><a href="people.html">PEOPLE</a></li>
     <li><a href="purpose.html">PURPOSE</a></li>
     <li><a class="active" href="resources.html">RESOURCES</a>
         <ul class="dropdown">
@@ -37,10 +98,15 @@
     <li><a href="contact.html">CONTACT</a></li>
   </div>
 </div>
+-->
+
+
 
   <!-- RESOURCES PAGE
     ---------------------- -->
-   <div class="container" id="resources" style="margin-top:175px; padding:15px 15px;">
+<div class="container" id="resources" style="margin-top:175px; padding:15px 15px;">
+
+  <div class="container" id="section1"> 
     <h2>Setting and sample.</h2>
     <p>Participants will be drawn from ethnically diverse public elementary
         school settings and informal settings. The target age range of the participants is 1st through 3rd
@@ -52,8 +118,10 @@
         These concepts are aligned with computer science standards appropriate for K-3 students. The
         game promotes transfer by allowing children to devise multiple ways to solve a puzzle. The use
         of blocks (vs. text) allows pre-readers, non-native speakers, and children with reading disabilities
-        to use the platform.</p> <br>
+        to use the platform.</p>
+  </div>
 
+  <div class="container" id="section2">
     <h2>Research design and methods.</h2>
     <p>The two research questions are (a) What CT processes do
         young children use as they program in a visual programming environment? and (b) What are the
@@ -69,8 +137,10 @@
         based programming. Telemetry-based measures of CT processes will be derived from children’s
         interaction with the visual programming environment. Metrics of the programs children create
         (e.g., number of commands) will be based on examination of existing programs (n = 2000
-        students) and programs from our studies.</p> <br>
+        students) and programs from our studies.</p>
+  </div>
 
+  <div class="container" id="section3">
     <h2>Data analytic strategy.</h2>
     <p>Sequence mining of students’ programming behavior will be used to
         identify recurring behaviors. These n-grams of behavior will be used to inform which states and
@@ -79,6 +149,8 @@
         the extent to which telemetry-based measures are sensitive to instruction, and the associations
         among the telemetry-based measures, program metrics, and external measures of CT.</p>
   </div>
+
+</div>
 
 
     

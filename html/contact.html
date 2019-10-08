@@ -23,32 +23,71 @@
     <script src="upload.js"></script>
     <script src="upload.php"></script>
 
-    <!--
-        <script src="../script/dropzone.js"></script>
-    <script src="https://rawgit.com/enyo/dropzone/master/dist/dropzone.js"></script>
-    <link rel="stylesheet" href="https://rawgit.com/enyo/dropzone/master/dist/dropzone.css">
-    <link href="https://rawgithub.com/hayageek/jquery-upload-file/master/css/uploadfile.css" rel="stylesheet">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-<script src="https://rawgithub.com/hayageek/jquery-upload-file/master/js/jquery.uploadfile.min.js"></script>-->
-
 </head>
 
 <body>
 
-<div class="navbar" id="navbar">
-  <a href="../index.html" id="logo"><img src="../images/logo.png" alt="Logo" style="max-height:70px; width: auto; height: auto;"></a>
-  <ul id="navbar-right">
-    <li><a href="../index.html">PEOPLE</a></li>
-    <li><a href="purpose.html">PURPOSE</a></li>
-    <li><a href="resources.html">RESOURCES</a>
-        <ul class="dropdown">
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
-        </ul></li>
-    <li><a class="active" href="contact.html">CONTACT</a></li>
+<div class="container-fluid" style="min-width: 1000px;" id="navigation_bar">
+<!-- Master nav -->
+<nav class="navbar-doublerow fixed-top">   
+  <!-- top nav -->
+  <nav class="navbar navbar-top">
+
+    <div class="nav-row">
+
+      <div class="col-3">
+        <!-- left nav top -->
+
+        <div class="row">
+          <a href="http://cresst.org/"><img src="../images/logo-icon.png" alt="CRESST-Logo" class="img-responsive" id="logo" align="middle"></a>
+          
+          <a href="https://codespark.com/" target="_blank"><img src="../images/cs-logo-icon.png" alt="codeSpark-Logo" class="img-responsive" id="logo" align="middle"></a>
+        </div>
+
+      </div>
+
+      <div class="col-9">
+        <!-- right nav top -->
+        <ul class="nav navbar-nav pull-right ml-auto" id="activeTab">
+          <li><a href="home.html">HOME</a></li>
+          <li><a href="people.html">PEOPLE</a></li>
+          <li><a href="purpose.html">PURPOSE</a></li>
+          <li><a href="resources.html">RESOURCES</a></li>
+          <li><a href="contact.html" class="active" >CONTACT</a></li>
+        </ul>
+      </div>
+  
+    </div>
+  </nav> <!-- /top nav -->
+
+  <!-- down nav -->
+  <nav class="navbar navbar-down">
+
+    <div class="nav-row2">
+      <div class="col-4">
+        <div class="row">
+          <a href="http://cresst.org/" target="_blank"><img src="../images/logo-black-words.png" alt="CRESST-Logo" class="img-responsive" id="logo-words" align="middle"></a>
+          
+          <a href="https://codespark.com/" target="_blank"><img src="../images/cs-logo-words.png" alt="codeSpark-Logo" class="img-responsive" id="logo-words" align="middle"></a>
+        </div>
+      </div>
+
+      <div class="col-8">
+    <ul class="nav navbar-nav ml-auto pull-right">
+      <li><a>tab4</a></li> <!-- active -->
+      <li><a>tab5</a></li>
+      <li><a>tab6</a></li>
+    </ul>
   </div>
+
+  </div>
+
+  </nav>
+
+</nav>    <!-- /master nav -->
 </div>
+
+
 
   <!-- CONTACT PAGE
     ---------------------- -->
@@ -112,6 +151,14 @@ $("#mulitplefileuploader").uploadFile(settings);
     <div id="img-preview" class="row">
 
     </div>
+</div>
+
+<br>
+
+<div class="container">
+  <a href="../images/logo-white.png" download="logo">Logo</a>
+  <br>
+  <a href="../TB.pdf" download>File</a>
 </div>
 
 <br>
