@@ -31,20 +31,21 @@ h3 {
   font-style: normal;
   font-weight: 100;
   color: #924EDB;
+  text-align: center;
 }
 
 p {
-    font-family: 'proxima-nova', sans-serif;
-    font-size: 14px;
-    font-weight: lighter;
-    color: black;
+  font-family: 'proxima-nova', sans-serif;
+  font-size: 14px;
+  font-weight: lighter;
+  color: black;
 }
 
 p2 {
   font-size: 16px;
-  font-family: 'Mansalva', cursive;
-  /*font-family: 'Noto Sans JP', sans-serif;*/
-  color: black;
+  font-family: 'Josefin Slab', serif;
+  color: gray;
+  font-weight: lighter;
   line-height: 1.8;
 }
 
@@ -55,41 +56,71 @@ p2 {
 
 }
 
-.profile {
+.cresst_profile {
   margin-bottom: 25px;
-  width: 250px;
-  height: 250px;
-  line-height: 250px;
+  width: 100%;
+  height: auto;
+  max-height: 150px;
+  max-width: 150px;
   text-align: center;
 }
 
-.profile img {
-  max-width:100%;
-  max-height:100%;
-  vertical-align: middle;
+.cresst_profile img {
+  width: 100%;
+  height: auto;
   border-radius: 50%;
-  border: 4px solid #FDA50F;
+  /*border: 4px solid #FDA50F;*/
 }
 
-.profile-pic {
-  margin-bottom: 5px;
-  width: 150px;
-  height: 150px;
-  line-height: 155px;
+.codesparks_profile {
   text-align: center;
-  display: block;
-  margin: auto;
-  margin-bottom: 1.5rem;
+  margin: 1.5rem auto 1.5rem auto;
+  padding: 4px;
+  width: 100%;
+  height: auto;
+  max-height: 150px;
+  max-width: 150px;
+  align-items: center;
+  border-radius: 50%;
+  background-image: linear-gradient(to bottom, #4F9AF2, #C537DD);
+  /*background-image: linear-gradient(to bottom, #FFB61E, #C537DD);*/
 }
 
-.profile-pic img {
-  max-width:100%;
-  max-height:100%;
+.codesparks_profile img {
+  width: 100%;
+  height: auto;
+  max-height: 150px;
+  max-width: 150px;
+  align-items: center;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.adv_profile {
+  align-items: center;
+  margin: 1.5rem auto 2rem auto;
+  width: 60%;
+  height: auto;
+  max-height: 150px;
+  max-width: 150px;
+  padding: 4px;
+  border-radius: 50%;
+  background-image: linear-gradient(to bottom, #4F9AF2, #C537DD);
+}
+
+.adv_profile img {
+  width: 100%;
+  height: auto;
+  max-height: 150px;
+  max-width: 150px;
   vertical-align: middle;
   align-items: center;
-  text-align: center;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   border-radius: 50%;
-  border: 4px solid #FDA50F;
 }
 
 .col {
@@ -103,15 +134,16 @@ p2 {
 }
 
 .bio {
-  padding: 18px 12px 0px 16px;
+  padding: 15px 10px 0px 16px;
   text-align: left;
   line-height: 1.8;
+  vertical-align: middle;
 }
 
 .header {
   text-align: center; 
   align-items: center; 
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   justify-content: center;
 }
 
@@ -133,9 +165,9 @@ p2 {
   padding: 0px 0px 0px 25px;
   background-color: #FFC2AD; /* For browsers that do not support gradients */
 
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.15);
 }
 
 .navbar-top ul>li>a{
@@ -239,14 +271,11 @@ ul {
 
 #logo {
   max-height: 75px; 
-  padding: 0px 30px 10px 4rem;
   width: auto; 
   height: auto;
-  display: flex;
+  display: block;
   align-items: center;
-  justify-content: center;
   vertical-align: center;
-  text-align: center;
 }
 
 #logo-words {
@@ -266,6 +295,8 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100%;
+  width: auto;
   margin-top: 10px;
 }
 
@@ -279,6 +310,7 @@ ul {
 ----------------------*/
 .section {
     width: 60%;
+    background-color: green;
 }
 
 .section-title {
@@ -287,7 +319,7 @@ ul {
 }
 
 .box {
-  background-color: #C8D9E0;
+  background-color: red;
   height: 275px;
   margin-bottom: 50px;
 }
@@ -295,7 +327,7 @@ ul {
 /*  #07242B  #5E7A85 */
 
 .box__input {
-  background-color: clear;
+  background-color: pink;
   width: 80%;
   height: 275px;
   margin: 0 auto;
@@ -326,7 +358,7 @@ ul {
 }
 
 #drop_file_zone {
-    background-color: #E4F6F8; 
+    background-color: purple; 
     border: #999 2px dashed;
     outline-offset: 10px;
     width: 80% 
@@ -345,10 +377,19 @@ ul {
   display: none;
 }
 
+.btn {
+  font-family: 'proxima-nova', sans-serif;
+  font-size: 14px;
+  font-weight: lighter;
+  color: black;
+}
 
 .btn-file {
   position: relative;
   overflow: hidden;
+  background-color: white;
+  color: black;
+  border: 2px gray;
 }
 
 .btn-file input[type=file] {
@@ -365,10 +406,11 @@ ul {
   background: orange;
   cursor: inherit;
   display: block;
+  background-color: orange;
 }
 
 .img-zone {
-  background-color: #E4F6F8;
+  background-color: clear;
   border: 2px dashed gray;
   border-radius: 5px;
   padding: 20px;
