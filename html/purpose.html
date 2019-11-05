@@ -21,45 +21,54 @@
     <script src="../script/script.js"></script>
 </head>
 
+<script>
+  $(document).ready(function() {
+  $('[data-toggle=offcanvas]').click(function() {
+    $('.row-offcanvas').toggleClass('active');
+  });
+});
+</script>
+
 <body>
 
-<div class="container-fluid" style="min-width: 1000px;">
+<div class="container-fluid" style="margin-bottom: 19rem;">
 <!-- Master nav -->
-<nav class="navbar-doublerow fixed-top">   
+<nav class="navbar-doublerow fixed-top"> 
   <!-- top nav -->
-  <nav class="navbar navbar-top">
+  <nav class="navbar navbar-top" role="navigation">
 
-    <div class="nav-row">
-
-      <div class="col-3">
-        <!-- left nav top -->
-
-        <div class="row">
-          <a href="http://cresst.org/"><img src="../images/logo-icon.png" alt="CRESST-Logo" class="img-responsive" id="logo" align="middle"></a>
-          
-          <a href="https://codespark.com/" target="_blank"><img src="../images/cs-logo-icon.png" alt="codeSpark-Logo" class="img-responsive" id="logo" align="middle"></a>
-        </div>
-
-      </div>
-
-      <div class="col-9">
-        <!-- right nav top -->
-        <ul class="nav navbar-nav pull-right ml-auto" id="activeTab">
-          <li><a href="home.html">HOME</a></li>
-          <li><a href="people.html">PEOPLE</a></li>
-          <li><a href="purpose.html" class="active">PURPOSE</a></li>
-          <li><a href="resources.html">RESOURCES</a></li>
-          <li><a href="contact.html">CONTACT</a></li>
-        </ul>
-      </div>
-  
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#top-navbar-options" aria-expanded="false"  style="background-color: blue; margin: 3rem 3rem;">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        
+        <!-- left nav top (icons) -->
+        <a href="http://cresst.org/"><img src="../images/logo-icon.png" alt="CRESST-Logo" id="logo" align="middle"></a>
+        <a href="https://codespark.com/" target="_blank"><img src="../images/cs-logo-icon.png" alt="codeSpark-Logo" id="logo" align="middle"></a>
     </div>
+ 
+      <div class="nav-row row-offcanvas row-offcanvas-left" id="top-navbar-options">
+        <div class="col-md-11 ml-auto sidebar-offcanvas" id="sidebar" role="navigation">
+          <!-- right nav top -->
+          <ul class="nav navbar-nav pull-right ml-auto" id="activeTab">
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="people.html">PEOPLE</a></li>
+            <li><a href="purpose.html" class="active">PURPOSE</a></li>
+            <li><a href="resources.html">RESOURCES</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+          </ul>
+        </div>
+      </div>
+
+
   </nav> <!-- /top nav -->
 
   <!-- down nav -->
   <nav class="navbar navbar-down">
 
-    <div class="nav-row2">
+    <div class="row">
       <div class="col-4">
         <div class="row">
           <a href="http://cresst.org/" target="_blank"><img src="../images/logo-black-words.png" alt="CRESST-Logo" class="img-responsive" id="logo-words" align="middle"></a>
@@ -86,7 +95,9 @@
 
 <!-- PURPOSE PAGE
     ---------------------- -->
-   <div class="container" id="purpose" style="margin-top:175px; padding:15px 15px;">
+   <div class="container" id="purpose">
+    <div class="row row-offcanvas row-offcanvas-left">
+
       <div class="row">
           <div class="col-8">
             <h2 style="margin-bottom: 3rem;">Purpose, topic, goal.</h2>
@@ -116,7 +127,7 @@
         <p>Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
     </div>
   </div>
-
+</div>
 
 </body>
 </html>
